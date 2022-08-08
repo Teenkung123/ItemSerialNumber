@@ -1,0 +1,22 @@
+Punishments:
+  CancelEvent: true
+  RemoveItem: false
+  ReduceHealthPercentage: 20
+  ReduceHealth: 0
+  Commands: []
+
+PunishmentVisual:
+  Lightning: true
+  Firework: true
+  PlaySound: true
+
+Alerts:
+  Enable: true
+  SendEvery: 10
+  AlertMessage: "<player> is holding <owner>'s <item>"
+
+BlockMessage:
+  Enable: true
+  SendEvery: 10
+  BlockMessage: "Hey! You cannot use <owner>'s <item>"
+

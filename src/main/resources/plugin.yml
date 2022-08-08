@@ -1,0 +1,6 @@
+name: ItemSerialNumber
+version: '${version}'
+main: com.teenkung.itemserialnumber.ItemSerialNumber
+api-version: 1.19
+prefix: ISN
+authors: [ Teenkung123 ]
