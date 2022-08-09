@@ -20,3 +20,9 @@ BlockMessage:
   SendEvery: 10
   BlockMessage: "Hey! You cannot use <owner>'s <item>"
 
+#to make item register to ISN add this to it's NBT:
+# - ISN <Boolean>|<Boolean>|<Boolean> = make item automatically registered to ISN
+# - First Boolean is can Unlock via normal unlock command (true = Allow normal unlock command to unlock)
+# - Second Boolean is for can punish (true = Allow Punishment)
+# - Third Boolean is for allow Alerts and Block Message (true = Allow Alert and Block Message)
+# - to make item that prevents player from giving it to others just use false|true|true

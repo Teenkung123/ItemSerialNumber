@@ -1,5 +1,7 @@
 package com.teenkung.itemserialnumber;
 
+import com.teenkung.itemserialnumber.Events.RegisterEvent;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,6 +16,9 @@ public final class ItemSerialNumber extends JavaPlugin {
     @Override
     public void onEnable() {
         Instance = this;
+
+        //This part used for Register event listener
+        Bukkit.getPluginManager().registerEvents(new RegisterEvent(), this);
     }
 
     @Override
