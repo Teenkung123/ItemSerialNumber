@@ -20,6 +20,33 @@ BlockMessage:
   SendEvery: 10
   BlockMessage: "Hey! You cannot use <owner>'s <item>"
 
+Message:
+    Prefix: "&7[&6ISN&7] &r"
+    noPermission: "&cYou do not have permission to perform this command!"
+    successRegister: "&aSuccessfully Registered this Item to Serial System!"
+    successUnregister: "&cSuccessfully Unregistered this Item from Serial System!"
+    #available placeholder:
+    #<item> - item's name
+    #<owner> - owner's name
+    #<owner UUID> - owner's UUID
+    #<holder> - holder's name
+    #<holder UUID> - holder's UUID
+    #<register time> - Register time in UNIX
+    #<register date> - Register Date
+    #<serial> - Serial ID
+    ItemInfo-Admin:
+      - "&7Item Info of &e<item>"
+      - "&7"
+      - "&7Owner: &e<owner> &8(<owner UUID>)"
+      - "&7Last Holder: &e<holder> &8(<holder UUID>)"
+      - "&7Register Time: &e<register date> &8(<register time>)"
+      - "&7Serial ID: &b<serial>"
+    ItemInfo-Default:
+      - "&7Item Info of &e<item>"
+      - "&7"
+      - "&7Owner: &e<owner>"
+    serialNotFound: "&cSerial Number Not Found from this item"
+
 #to make item register to ISN add this to it's NBT:
 # - ISN <Boolean>|<Boolean>|<Boolean> = make item automatically registered to ISN
 # - First Boolean is can Unlock via normal unlock command (true = Allow normal unlock command to unlock)

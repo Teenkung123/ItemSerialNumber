@@ -4,3 +4,25 @@ main: com.teenkung.itemserialnumber.ItemSerialNumber
 api-version: 1.19
 prefix: ISN
 authors: [ Teenkung123 ]
+commands:
+  ItemSerialNumber:
+    aliases:
+      - ISN
+      - Serial
+permissions:
+  isn.bypass:
+    description: allowed to bypass ISN Punishment and taggings
+    default: op
+  isn.receive-alerts:
+    description: allowed to receive alerts from ISN
+    default: op
+  isn.moreInfo:
+    description: display more info about serial item
+    default: op
+  isn.admin:
+    description: allowed to bypass ISN Punishment and taggings and allowed to receive alerts and allowed to use admin commands
+    default: op
+    children:
+      - isn.bypass
+      - isn.receive-alerts
+      - isn.moreInfo
