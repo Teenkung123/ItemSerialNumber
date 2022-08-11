@@ -5,18 +5,21 @@ api-version: 1.19
 prefix: ISN
 authors: [ Teenkung123 ]
 commands:
-  ItemSerialNumber:
+  itemserialnumber:
     aliases:
-      - ISN
-      - Serial
+      - isn
+      - serial
 permissions:
+  isn.use:
+    description: allowed player to use ISN's commands
+    default: op
   isn.bypass:
     description: allowed to bypass ISN Punishment and taggings
     default: op
   isn.receive-alerts:
     description: allowed to receive alerts from ISN
     default: op
-  isn.moreInfo:
+  isn.moreinfo:
     description: display more info about serial item
     default: op
   isn.admin:
@@ -25,4 +28,4 @@ permissions:
     children:
       - isn.bypass
       - isn.receive-alerts
-      - isn.moreInfo
+      - isn.moreinfo

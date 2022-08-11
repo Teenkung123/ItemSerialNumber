@@ -1,6 +1,6 @@
 package com.teenkung.itemserialnumber;
 
-import com.teenkung.itemserialnumber.Commands.Serial;
+import com.teenkung.itemserialnumber.Commands.SerialCommand;
 import com.teenkung.itemserialnumber.Commands.SerialTabComplete;
 import com.teenkung.itemserialnumber.Events.RegisterEvent;
 import org.bukkit.Bukkit;
@@ -20,6 +20,8 @@ public final class ItemSerialNumber extends JavaPlugin {
     @Override
     public void onEnable() {
         Instance = this;
+        ConfigLoader.generateConfigFile();
+        ConfigLoader.loadConfigurations();
 
         //This part used for Register event listener
         Bukkit.getPluginManager().registerEvents(new RegisterEvent(), this);
@@ -27,7 +29,7 @@ public final class ItemSerialNumber extends JavaPlugin {
         //This part used for Register commands
         PluginCommand command = getCommand("ItemSerialNumber");
         if (command != null) {
-            command.setExecutor(new Serial());
+            command.setExecutor(new SerialCommand());
             command.setTabCompleter(new SerialTabComplete());
         }
     }

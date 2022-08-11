@@ -27,7 +27,7 @@ public class RegisterEvent implements Listener {
     @EventHandler
     public void InventoryClickEvent(InventoryClickEvent event) {
         ItemStack item = event.getCurrentItem();
-        if (item != null) {
+        if (item != null && item.getType() != Material.AIR) {
             SerialItem serial = new SerialItem(item);
             if (serial.canRegister()) {
                 serial.registerSerialItemByISNNBT(event.getWhoClicked().getUniqueId());
